@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&display=swap");
+
+.menu {
+	background-color: #33383d;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: "Montserrat", sans-serif;
+}
+.menu-title {
+	width: auto;
+	height: auto;
+	color: #fff;
+	font-size: 48px;
+	text-align: center;
+	padding: 20px;
+}
+.buttons {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	width: auto;
+	height: auto;
+}
+.menu-button {
+	background-color: #ff6868;
+	width: 300px;
+	height: 50px;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 18px;
+	cursor: pointer;
+	text-align: center;
+	white-space: nowrap;
+	font-weight: 700;
+	border-radius: 5px;
+	margin: 15px;
+	border: none;
+	font-family: "Montserrat", sans-serif;
+}
+
+.menu-button:hover {
+	color: #33383d;
+}

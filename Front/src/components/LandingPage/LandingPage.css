@@ -1,0 +1,71 @@
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+
+* {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "SF Pro Display", SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+		sans-serif;
+}
+
+.landingpage {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	justify-content: center;
+	align-items: center;
+	height: 100%; /* Set the height of the landingpage to the full viewport height */
+	background: linear-gradient(to bottom, #1c1c1c, #000);
+}
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	text-align: center;
+	height: auto;
+	box-sizing: border-box;
+	background-color: unset;
+}
+.container .title {
+	display: inline-block;
+	color: transparent;
+	background-image: linear-gradient(180deg, #ffb6ff, #b344ff);
+	-webkit-background-clip: text;
+	background-clip: text;
+	padding-top: 0.5px;
+	margin-top: 16px;
+	font-size: 40px;
+	font-weight: 600;
+	margin-bottom: 18px;
+}
+.container .description {
+	background-color: unset;
+	font-size: 21px;
+	font-weight: 400;
+	color: #86868b;
+}
+.container .button {
+	background: #0071e3;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+	font-size: 25px;
+	font-weight: 800;
+	max-width: 250px;
+	padding: 8px 16px;
+	border-radius: 5px;
+	margin: 15px;
+}
+
+.container .button:hover {
+	background: #b344ff;
+	transition: all 0.2s;
+}

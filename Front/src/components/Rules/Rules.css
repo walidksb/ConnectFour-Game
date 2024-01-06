@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&display=swap");
+
+.rules__container {
+	height: auto;
+	background-color: #33383d;
+}
+.navbar {
+	background-color: #ff6868;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.cont {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 20px;
+	align-items: center;
+	background-color: #ff6868;
+}
+.nav-bar__button {
+	background-color: #ff6868;
+	color: #fff;
+	font-size: 18px;
+	cursor: pointer;
+	text-align: center;
+	white-space: nowrap;
+	font-weight: 700;
+	border: none;
+	font-family: "Montserrat", sans-serif;
+	text-decoration: none;
+	width: auto;
+	height: auto;
+}
+.nav-bar__button:hover {
+	color: #33383d;
+}
+
+.title {
+	width: auto;
+	height: auto;
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+	padding: 20px;
+	font-family: "Montserrat", sans-serif;
+}
+.desc1-cont {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 10px;
+}
+.desc1-cont > p {
+	color: #fff;
+	font-size: 14px;
+}
+.desc1-cont > ol > li {
+	width: auto;
+	height: auto;
+	color: #fff;
+	font-size: 14px;
+	list-style: none;
+	margin-bottom: 10px;
+}
+.desc1 {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
+}
+.desc1 > img {
+	width: 25px;
+	height: 25px;
+}
+.description1 {
+	width: auto;
+	height: auto;
+	color: #ff6868;
+	font-size: 20px;
+	font-family: "Montserrat", sans-serif;
+}
+.menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: "Montserrat", sans-serif;
+}

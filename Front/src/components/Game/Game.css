@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&display=swap");
+
+/* src/components/Game.css */
+.game-container {
+	height: auto;
+	background-color: #33383d;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-bottom: 40px;
+}
+.navbar {
+	background-color: #ff6868;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cont {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 20px;
+	align-items: center;
+	background-color: #ff6868;
+}
+.cont1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+}
+.game {
+	display: flex;
+	flex-direction: row;
+	gap: 100px;
+	justify-content: center;
+	align-items: center;
+}
+
+.players {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+	width: auto;
+}
+.p {
+	display: flex;
+	width: 200px;
+	height: auto;
+	padding: 16px 11px;
+	justify-content: center;
+	align-items: center;
+	background-color: #ff6868;
+	border-radius: 4px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 20px;
+	color: #33383d;
+	cursor: pointer;
+}
+.p:hover {
+	background-color: #016cc7;
+}
+.p1 {
+	display: flex;
+	width: 200px;
+	height: auto;
+	padding: 16px 11px;
+	justify-content: center;
+	align-items: center;
+	background-color: #ff6868;
+	border-radius: 4px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 20px;
+	color: #33383d;
+}
+.p1 > img {
+	width: 20px;
+	height: 20px;
+}
+.p2 {
+	display: flex;
+	width: 200px;
+	height: auto;
+	padding: 16px 11px;
+	justify-content: center;
+	align-items: center;
+	gap: 7px;
+	background-color: #ff6868;
+	border-radius: 4px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 20px;
+	color: #33383d;
+}
+.game-title {
+	width: auto;
+	height: auto;
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+	padding: 20px;
+	font-family: "Montserrat", sans-serif;
+}
