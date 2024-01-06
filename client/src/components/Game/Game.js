@@ -43,10 +43,10 @@ const Game = () => {
 			});
 		} else if (id === "2" && gameStarted) {
 			socket.on("update_board", (data) => {
-				console.log("board updated" + data.board);
+				console.log("board updated in player vs ai" + data.board);
 				// Update the board state
 				setBoard(data.board);
-				if (data.player === 1) {
+				if ((data.player % 2) + 1 === 1) {
 					socket.emit("ai1_turn", {
 						game_id: { game_id },
 						player: 2,
