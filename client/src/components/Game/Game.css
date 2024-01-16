@@ -10,7 +10,7 @@
 	padding-bottom: 40px;
 }
 .navbar {
-	background-color: #ff6868;
+	background-color: #ff006e;
 	height: 60px;
 	display: flex;
 	justify-content: space-between;
@@ -23,7 +23,7 @@
 	justify-content: center;
 	gap: 20px;
 	align-items: center;
-	background-color: #ff6868;
+	background-color: #ff006e;
 }
 .cont1 {
 	display: flex;
@@ -44,47 +44,50 @@
 	display: inline-flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 20px;
+	gap: 10px;
 	width: auto;
+	text-align: center;
 }
-.p {
+.players > h1 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 25px;
+	color: #fff;
+}
+.start-button {
 	display: flex;
-	width: 200px;
-	height: auto;
+	width: 130px;
+	height: 10px;
 	padding: 16px 11px;
 	justify-content: center;
 	align-items: center;
-	background-color: #ff6868;
+	background-color: #ff006e;
 	border-radius: 4px;
 	font-family: "Montserrat", sans-serif;
 	font-size: 20px;
 	color: #33383d;
 	cursor: pointer;
 }
-.p:hover {
+.start-button:hover {
 	background-color: #016cc7;
 }
 .p1 {
 	display: flex;
-	width: 200px;
-	height: auto;
+	width: 130px;
+	height: 10px;
 	padding: 16px 11px;
 	justify-content: center;
 	align-items: center;
-	background-color: #ff6868;
+	gap: 7px;
+	background-color: #016cc7;
 	border-radius: 4px;
 	font-family: "Montserrat", sans-serif;
 	font-size: 20px;
 	color: #33383d;
 }
-.p1 > img {
-	width: 20px;
-	height: 20px;
-}
 .p2 {
 	display: flex;
-	width: 200px;
-	height: auto;
+	width: 130px;
+	height: 10px;
 	padding: 16px 11px;
 	justify-content: center;
 	align-items: center;
@@ -103,4 +106,20 @@
 	text-align: center;
 	padding: 20px;
 	font-family: "Montserrat", sans-serif;
+}
+
+.invalid {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	background-color: #ff006e;
+}
+
+.invalid > h2 {
+	width: auto;
+	height: auto;
+	font-family: "Montserrat", sans-serif;
+	font-size: 20px;
+	color: #33383d;
+	background-color: unset;
 }

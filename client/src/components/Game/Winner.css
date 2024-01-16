@@ -5,7 +5,7 @@
 	background-color: #33383d;
 }
 .navbar {
-	background-color: #ff6868;
+	background-color: #ff006e;
 	height: 60px;
 	display: flex;
 	justify-content: space-between;
@@ -17,7 +17,7 @@
 	justify-content: center;
 	gap: 20px;
 	align-items: center;
-	background-color: #ff6868;
+	background-color: #ff006e;
 }
 
 .popup {
@@ -68,7 +68,7 @@
 	text-decoration: none;
 	color: #33383d;
 	text-align: center;
-	background-color: #ff6868;
+	background-color: #ff006e;
 	margin-bottom: 40px;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 700;
@@ -77,7 +77,7 @@
 .winner-title {
 	font-family: "Montserrat", cursive;
 	font-size: 50px;
-	color: #ff6868;
+	color: #ff006e;
 	text-align: center;
 	margin-top: 20px;
 	margin-bottom: 20px;

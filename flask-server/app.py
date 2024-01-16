@@ -28,12 +28,7 @@ def handle_start_game(data):
     game_id = str(data['game_id'])
     games[game_id] = ConnectFourBoard()
     print("Game started! Game ID: " + game_id)
-    while not games[game_id].gameOver():
-        continue
-    if games[game_id].gameOver():
-        winner = 1 if games[game_id].win(1) else 2 if games[game_id].win(2) else 0
-        emit('game_over', {'winner': winner})
-        emit('disconnect')
+    # emit('update_board', {'board': games[game_id].board})
 
 
 
@@ -42,33 +37,19 @@ def human_turn1(data):
     game_id = str(data['game_id'])
     board = games[game_id]
     column = data['column']['columnIndex']
-    #print type of column
-    print(type(column))
+    player = data['player']
+    print("player" + str(player))
     if column in board.getPossibleMoves():
         for i in range(5, -1, -1):
             if board.board[i][column] == 0:
-                board.makeMove(i, column, 1)
+                board.makeMove(i, column, player)
                 break
-        emit('update_board', {'board': board.board, 'player': 1})
+        emit('update_board', {'board': board.board, 'player': player})
         print("updatd board" + str(board.board))
         # emit('ai1_turn', {'game_id': game_id})
-    else:
-        emit('invalid_column', {'game_id': game_id})
+        #check if the game is over
+        check_game_over(board)
 
-@socketio.on('human_turn2')
-def human_turn2(data):
-    game_id = str(data['game_id'])
-    board = games[game_id]
-    column = data['column']['columnIndex']
-    #print type of column
-    print(type(column))
-    if column in board.getPossibleMoves():
-        for i in range(5, -1, -1):
-            if board.board[i][column] == 0:
-                board.makeMove(i, column, 2)
-                break
-        emit('update_board', {'board': board.board, 'player': 2})
-        print("updatd board" + str(board.board))
     else:
         emit('invalid_column', {'game_id': game_id})
     
@@ -86,7 +67,9 @@ def ai1_turn(data):
         if board.board[i][column] == 0:
             board.makeMove(i, column, player)
             break
-    emit('update_board', {'board': board.board, 'player': player % 2 +1})
+    emit('update_board', {'board': board.board, 'player': player})
+    check_game_over(board)
+
 
 # Computer's turn
 @socketio.on('ai2_turn')
@@ -97,13 +80,20 @@ def ai2_turn(data):
     print("Game id : " + game_id)
     board = games[game_id]
     play = Play(board)
-    column = play.AIbot1()
+    column = play.AIbot2()
     for i in range(5, -1, -1):
         if board.board[i][column] == 0:
             board.makeMove(i, column, 2)
             break
-    emit('update_board', {'board': board.board, 'player': player % 2 +1})
-        
+    emit('update_board', {'board': board.board, 'player': player})
+    check_game_over(board)
+
+def check_game_over(board):
+    if board.gameOver():
+        print("Game over!")
+        winner = 1 if board.win(1) else 2 if board.win(2) else 0
+        emit('game_over', {'winner': winner})
+        emit('disconnect')
 
 
 
