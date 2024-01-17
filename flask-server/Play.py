@@ -9,22 +9,22 @@ class Play:
 
     #ai bot 1
     def AIbot1(self):
-        depth = 4
+        depth = 5
         _,best_move = self.minimaxAlphaBetaPruning(self.board,depth, True, float('-inf'), float('inf'),1)
         return best_move
     
     #ai bot 2 is the same as ai bot 1 but with a different heuristic
     def AIbot2(self):
-        depth = 4
+        depth = 5
         _,best_move = self.minimaxAlphaBetaPruning(self.board,depth, True, float('-inf'), float('inf'),2)
         return best_move
             
     def minimaxAlphaBetaPruning(self,board, depth, maximizingPlayer, alpha, beta,heuristic):
         if depth == 0 or board.gameOver():
             if(heuristic==1):
-                return board.heuristic3(2),None
-            else:
                 return board.heuristic2(2),None
+            else:
+                return board.heuristic1(2),None
 
         if maximizingPlayer:
             max_eval = float('-inf')
